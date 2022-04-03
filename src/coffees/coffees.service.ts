@@ -33,6 +33,7 @@ export class CoffeesService {
 
   create(coffeeDto: any) {
     this.coffees.push(coffeeDto);
+    return coffeeDto;
   }
 
   update(id: string, coffeeDto: any) {
