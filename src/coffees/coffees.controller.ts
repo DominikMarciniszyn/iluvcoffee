@@ -28,7 +28,6 @@ export class CoffeesController {
     return this.coffeesService.findOne(id);
   }
 
-  // You can pass string to Post to return only one parameter
   @Post()
   create(@Body() createCoffeeDto: CreateCoffeeDto) {
     return this.coffeesService.create(createCoffeeDto);
@@ -44,8 +43,3 @@ export class CoffeesController {
     return this.coffeesService.remove(id);
   }
 }
-
-// Notes:
-// PUT replaces entire object/resource
-// PATCH modofies parts of object/resource
-//
