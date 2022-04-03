@@ -1,6 +1,7 @@
 version: "3"
 services:
   database:
+    container_name: coffee_database
     image: postgres
     restart: always
     ports:
