@@ -16,14 +16,7 @@ export class CoffeeBrandsFactory {
 
 @Module({
   controllers: [CoffeesController],
-  providers: [
-    CoffeesService,
-    {
-      provide: COFFEE_BRANDS,
-      useFactory: (coffeFactory: CoffeeBrandsFactory) => coffeFactory.create(),
-      inject: [CoffeeBrandsFactory],
-    },
-  ],
+  providers: [CoffeesService],
   imports: [TypeOrmModule.forFeature([Coffee, Flavor, Event])],
   exports: [CoffeesService],
 })
