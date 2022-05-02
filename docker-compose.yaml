@@ -8,4 +8,12 @@ services:
       - "5435:5432"
     environment:
       - POSTGRES_PASSWORD=secret
+  test-database:
+    container_name: test_coffee_database
+    image: postgres
+    restart: always
+    ports:
+      - "5445:5432"
+    environment:
+      - POSTGRES_PASSWORD=secret
 
